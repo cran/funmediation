@@ -237,11 +237,11 @@ funmediation <- function(data,
   m <- eval.parent(m);
   id_variable_name <- as.character(substitute(id));
   time_variable_name <- as.character(substitute(time));
-  if(class(substitute(treatment))=="call") {
+  if(inherits(substitute(treatment),"call")) {
     # Exposure(s) were specified as a formula with one or more variables.
     treatment_variable_names <- attr(terms(as.formula(treatment)),"term.labels");
   } else {
-    if(class(substitute(treatment))=="name") {
+    if(inherits(substitute(treatment),"name")) {
       # Exposure was specified as a single variable.
       treatment_variable_names <- as.character(substitute(treatment));
     } else {

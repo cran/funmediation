@@ -9,9 +9,15 @@ simulate_funmediation_example(
   nlevels = 2,
   ntimes = 100,
   observe_rate = 0.4,
-  alpha_int = function(t) {     return(t^0.5) },
-  alpha_X = function(t) {     return(-(t/2)^0.5) },
-  beta_M = function(t) {     (1/2) * (exp(t) - 1) },
+  alpha_int = function(t) {
+     return(t^0.5)
+ },
+  alpha_X = function(t) {
+     return(-(t/2)^0.5)
+ },
+  beta_M = function(t) {
+     (1/2) * (exp(t) - 1)
+ },
   beta_int = 0,
   beta_X = 0.2,
   sigma_Y = 1,
